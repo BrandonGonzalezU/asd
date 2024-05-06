@@ -1,0 +1,224 @@
+<p-toolbar id="search-toolbar">
+    <div class="grid">
+        <div class="col-3">
+            <img src="../../../assets/logo.png" style="max-height: 85px;">
+        </div>
+        <div class="col-6 flex center-content">   
+            <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input pInputText placeholder="Búsqueda" />
+            </span>
+            <p-button (click)="showDialog()"><i class="pi pi-search"></i></p-button>
+        </div>
+    </div>
+</p-toolbar>
+
+<div class="fichaTecnica">
+    <div class="headerFicha flex">
+        <div class="flex center-content">
+            <p-button  raised label="Volver" styleClass="w-10rem h-1rem" (onClick)="goToFichaTecnica()"></p-button>
+        </div>
+
+        <header>
+            Ficha Técnica UDC
+        </header>
+
+        <p-table [value]="UDC">
+            <ng-template pTemplate="body" class="menu" let-product>  
+                <p class="m-0 ">
+                    {{product.activoGerencia}}        
+                </p>
+            </ng-template>
+        </p-table>
+
+    </div>
+
+    
+    <p-dialog header="Búsqueda" [(visible)]="visible" [modal]="true" [style]="{ width: '80vw' }" [draggable]="false" [resizable]="false">
+        <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>UDC</th>
+                    <th>Servicio</th>
+                    <th>Clase</th>
+                    <th>Activo</th>
+                    
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product>
+                <tr>
+                    <td>{{ product.code }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.quantity }}</td>
+                    <td>{{ product.category }}</td>
+                    
+                </tr>
+            </ng-template>
+        </p-table>
+        
+    </p-dialog>
+
+    <div class="card p-0 grid-nogutter flex border-1 surface-border">
+        
+        <div class="col-12 md:col-6 lg:col-3 py-4  px-6 border-none md:border-right-1 surface-border">
+            <div class="flex align-items-center ">
+
+                <span class="text-xl ml-2">Nivel de priorización: 30</span>
+                <i class="pi pi-circle-on p-element pl-2" style="color: yellow"></i>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-3 py-4   border-none md:border-right-1 surface-border">
+            <div class="flex align-items-center ">
+
+                <span class="text-xl ml-2">Tipo de inspección: TOTAL</span>
+                <i class="pi pi-circle-on p-element pl-2" style="color: green"></i>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-3 py-4  px-6 border-none md:border-right-1 surface-border">
+            <div class="flex align-items-center ">
+
+                <span class="text-xl ml-2">Prioridad: ALTA</span>
+                <i class="pi pi-circle-on p-element pl-2" style="color: red"></i>
+            </div>
+        </div>
+
+        <div class="col-12 md:col-6 lg:col-3 py-4  px-2 border-none md:border-right-1 surface-border">
+            <div class="flex align-items-center ">
+
+                <span class="text-xl ml-2">Estado operativo: OPERANDO</span>
+                <i class="pi pi-circle-on p-element pl-2" style="color: green"></i>
+            </div>
+        </div>
+
+    
+    </div>
+    
+    <div class="tablaUdc mb-4">
+        <p-table class="tabla surface" [value]="UDC" [tableStyle]="{ 'min-width': '50rem' }">
+            <ng-template class="tabla" pTemplate="body" class="menu" let-product >
+                <tr>
+                    <div class="grupo1 ">
+                        <div class="cell">
+                            <th>UDC</th>
+                            <td>{{ product.udc }}</td>
+                        </div>
+        
+                        <div class="cell">
+                            <th>UDC Anterior</th>
+                            <td>{{ product.udcAnterior }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Tipo UDC</th>
+                            <td>{{ product.tipoUDC }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Ubicación técnica</th>
+                            <td>{{ product.ubicacion }}</td>
+                        </div>
+                    </div>
+        
+                    <div class="grupo2">
+                        <div class="cell">
+                            <th>Sistema</th>
+                            <td>{{ product.sistema }}</td>
+                        </div>
+        
+                        <div class="cell">
+                            <th>Complejo/Campo</th>
+                            <td>{{ product.complejo }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Tipo equipo</th>
+                            <td>{{ product.tipoEquipo }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Tipo UDC</th>
+                            <td>{{ product.tipoUDC }}</td>
+                        </div>
+                    </div>
+        
+                    <div class="grupo3">
+                        <div class="cell">
+                            <th>Instalación</th>
+                            <td>{{ product.instalacion }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Isométrico Tradicional</th>
+                            <td>{{ product.isometricoTradicional }}</td>
+                        </div>
+                    </div>
+    
+                    <div class="grupo3">
+                        <div class="cell">
+                            <th>Fecha Inspección</th>
+                            <td>{{ product.fechaInspeccion }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Fecha Reporte</th>
+                            <td>{{ product.fechaReporte }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Fecha Reporte Inspección</th>
+                            <td>{{ product.fechaReporteInspeccion }}</td>
+                        </div>
+                        <div class="cell">
+                            <th>Fecha Reporte Próxima Inspección</th>
+                            <td>{{ product.fechaProximaInspeccion }}</td>
+                        </div>
+                    </div>
+
+                    <div class="grupo4">
+                        <div class="cell">
+                            <th>Descripción</th>
+                            <td>{{ product.descripcion }}</td>
+                        </div>
+                    </div>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+
+    <div class="botonesReporte flex ">
+        <p-button class="mt-2 mr-5" (click)="showReporte()" icon="pi pi-external-link" label="Observaciones Inspeccion"></p-button>
+
+        <p-table [value]="UDC">
+        <ng-template pTemplate="body" class="menu" let-product>
+            <p-dialog  header="Observaciones Inspeccion" [(visible)]="visibleReport" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">   
+                <p class="m-0 ">
+                    {{product.observacionesInspeccion}}
+                </p>
+            </p-dialog>
+        </ng-template>
+        </p-table>
+
+        
+        <p-button class="mt-2 mr-5" (click)="showDesviacion()" icon="pi pi-external-link" label="Desviación"></p-button>
+
+        <p-table [value]="UDC">
+        <ng-template pTemplate="body" class="menu" let-product>
+            <p-dialog  header="Observaciones Desviación" [(visible)]="visibleDesviacion" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">   
+                <p class="m-0 ">
+                    {{product.desviacion}}
+                </p>
+            </p-dialog>
+        </ng-template>
+        </p-table>
+
+        <p-button class="mt-2" (click)="showAccion()" icon="pi pi-external-link" label="Accion Correctiva"></p-button>
+
+        <p-table [value]="UDC">
+            <ng-template pTemplate="body" class="menu" let-product>
+                <p-dialog  header="Acción Correctiva" [(visible)]="visibleAccion" [modal]="true" [style]="{ width: '50vw' }" [draggable]="false" [resizable]="false">   
+                    <p class="m-0 ">
+                        {{product.accionCorrectiva}}
+                    </p>
+                </p-dialog>
+            </ng-template>
+        </p-table>
+    </div>
+
+</div>
+
+

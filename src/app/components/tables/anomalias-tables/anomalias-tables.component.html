@@ -1,0 +1,123 @@
+<app-header></app-header>
+<div class="flex ">
+    <app-sidebar></app-sidebar>
+    <div class="layout-content">
+        <div class="grid">
+            <div class="card">
+                <p-table [value]="Plataformas" #dt1 dataKey="id" [rows]="10" [rowsPerPageOptions]="[10, 25, 50]"
+                    [paginator]="true" [scrollable]="true" scrollHeight="780px"
+                    [globalFilterFields]="['name', 'country.name', 'representative.name', 'status']">
+                    <ng-template pTemplate="header">
+                        <tr class="ng-star-inserted">
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    ID
+                                    <p-columnFilter type="text" field="id" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Sistema
+                                    <p-columnFilter type="text" field="Sistema" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    ID Ident
+                                    <p-columnFilter type="text" field="idIdent" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    ID Sistema
+                                    <p-columnFilter type="text" field="idSistema" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Nivel de Auditoria
+                                    <p-columnFilter type="text" field="nivelAuditoria" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    No, de la No Conformidad
+                                    <p-columnFilter type="text" field="noNoConformidad" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Plataformas
+                                    <p-columnFilter type="text" field="plataforma" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Nivel de Riesgo
+                                    <p-columnFilter type="text" field="nivelRiesgo" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Fecha de deteccion
+                                    <p-columnFilter type="date" field="fechaDeteccion" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Fecha de Atención
+                                    <p-columnFilter type="date" field="fechaAtencion" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Estado del PACP
+                                    <p-columnFilter type="text" field="estadoPACP" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Avance %
+                                    <p-columnFilter type="text" field="avance" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Responsable
+                                    <p-columnFilter type="text" field="responsable" display="menu" />
+                                </div>
+                            </th>
+                            <th style="min-width: 8rem;">
+                                <div class="flex justify-content-between align-items-center">
+                                    Responsable ejecutor
+                                    <p-columnFilter type="text" field="responsableEjecutor" display="menu" />
+                                </div>
+                            </th>
+
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-product>
+                        <tr>
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.Sistema }}</td>
+                            <td>{{ product.idIdent }}</td>
+                            <td>{{ product.idSistema }}</td>
+                            <td>{{ product.nivelAuditoria }}</td>
+                            <td>{{ product.noNoConformidad }}</td>
+                            <td>{{ product.plataforma }}</td>
+                            <td>{{ product.nivelRiesgo }}</td>
+                            <td>{{ product.fechaDeteccion }}</td>
+                            <td>{{ product.fechaAtencion }}</td>
+                            <td>{{ product.estadoPACP }}</td>
+                            <td>{{ product.avance }}</td>
+                            <td>{{ product.responsable }}</td>
+                            <td>{{ product.responsableEjecutor }}</td>
+
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+
+</div>

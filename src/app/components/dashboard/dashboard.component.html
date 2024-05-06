@@ -1,0 +1,166 @@
+<app-header></app-header>
+<div class="flex ">
+    <app-sidebar></app-sidebar>
+    <div class="layout-content">
+        <div class="grid">
+
+            <div class="col-12 md:col-4">
+                <div class="card relative h-6rem border-round-xl p-3"><span class="text-sm font-medium line-height-1">
+                        HALLAZGOS DE MAYO </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #fc6161; box-shadow: 0px 6px 20px rgba(252, 97, 97, 0.3);">
+                                <i class="pi pi-arrow-down w-2rem"></i><span class="line-height-2">3</span>
+                            </div>
+                            <div class="line-height-4 text-4xl">15 <span class="text-sm">Hallazgos añadidos</span></div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4">
+                <div class="card relative h-6rem border-round-xl p-3"><span class="text-sm font-medium line-height-1">
+                        EN PRIORIDAD ALTA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(11, 209, 138, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem"></i><span class="line-height-2">35%</span>
+                            </div>
+                            <div class="line-height-4 text-4xl">355 UDC</div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4">
+                <div class="card relative h-6rem border-round-xl p-3"><span class="text-sm font-medium line-height-1">
+                        ANOMALIAS TERMINADAS </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #00d0de; box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);"><i
+                                    class="pi pi-plus w-2rem"></i><span class="line-height-2">4</span></div>
+                            <div class="line-height-4 text-4xl">6 <span class="text-sm">en el mes de Mayo</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/quantity.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-8">
+                <div class="card widget-visitor-graph">
+                    <div class="card-header line-height-4">
+                        <span>Resumen de no conformidades APAPCH Abril 2024</span>
+
+                        <form [formGroup]="formGroup">
+                            <p-dropdown optionlabel="name"
+                                class="p-element p-inputwrapper ng-valid p-inputwrapper-filled ng-dirty ng-touched"
+                                formControlName="selectedCity" [options]="fechas" optionLabel="anio"
+                                placeholder="Elije una fecha">
+                                <div id="pn_id_874"
+                                    class="p-dropdown5 p-component p-inputwrapper p-inputwrapper-filled">
+
+                                    <div role="button" aria-label="dropdown trigger" aria-haspopup="listbox"
+                                        class="p-dropdown-trigger" data-pc-section="trigger" aria-expanded="false">
+                                        <!---->
+                                    </div>
+                                    <p-overlay
+                                        class="p-element ng-tns-c3177733119-223 ng-star-inserted"><!----></p-overlay>
+                                </div>
+                            </p-dropdown>
+                        </form>
+                    </div>
+
+                    <div class="graph-content grid ">
+                        <div class="col-12 md:col-6">
+                            <h2>58 Pendientes </h2>
+                            <h6 class="mt-1">10% más que el último mes</h6>
+                            <p class="text-color-secondary"> Para ver el programa detallado haga clic en el siguiente
+                                enlace
+                                <a href="#" class="text-primary hover:text-primary-400 transition-duration-200">Ver
+                                    más</a>
+                            </p>
+                        </div>
+                        <div class="col-12 md:col-6">
+                            <h2>39 Atendidas</h2>
+                            <h6 class="mt-1">37% más que el último mes</h6>
+                            <p class="text-color-secondary">Responsables <a href="#"
+                                    class="text-primary hover:text-primary-400 transition-duration-200">Ver más</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex">
+
+                        <div class="col-12 md:col-6 graph">
+
+                            <h6 class="mt-1">Programa de atención</h6>
+                            <p-chart type="bar" [data]="graficaMensual" [options]="options">
+                                <div style="position: relative;"><canvas role="img"
+                                        style="display: block; box-sizing: border-box; height: 263px; width: 526px;"
+                                        width="526" height="263"></canvas></div>
+                            </p-chart>
+                        </div>
+
+                        <div class="col-12 md:col-6 graph relative">
+                            <span class="totalConformidades text-6xl font-medium">97</span>
+                            <span class="totalPendientes text-4xl font-medium">58</span>
+                            <span class="totalAtendidas text-4xl font-medium">39</span>
+                            <h6 class="mt-1">No conformidades</h6>
+                            <p-chart type="doughnut" [data]="data" [options]="options" />
+                        </div>
+
+                        <div class="col-12 md:col-6 graph">
+
+                            <h6 class="mt-1">Nivel de criticidad</h6>
+                            <p-chart type="bar" [data]="tipoRiesgo" [options]="options">
+                                <div style="position: relative;"><canvas role="img"
+                                        style="display: block; box-sizing: border-box; height: 263px; width: 526px;"
+                                        width="526" height="263"></canvas></div>
+                            </p-chart>
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4">
+                <div class="card p-0">
+                    <div class="timeline-header p-3 flex justify-content-between align-items-center">
+                        <p class="m-0">Reporte mensual</p>
+                        <div class="header-icons">
+                            <i class="pi pi-refresh ml-2"></i>
+                            <i class="pi pi-filter ml-2"></i>
+                        </div>
+                    </div>
+                    <div class="pb-3 timeline-content">
+                        <p-timeline [value]="events" class="py-0 px-3 p-element">
+                            <ng-template pTemplate="marker" let-event>
+                                <span
+                                    class="flex w-2rem h-2rem align-items-center justify-content-center text-white border-circle  shadow-1"
+                                    [style]="{ 'background-color': event.color }">
+                                    <i [class]="event.icon"></i>
+                                </span>
+                            </ng-template>
+                            <div class="p-timeline-event-separator" data-pc-section="separator"></div>
+                            <ng-template pTemplate="content" let-event>
+                                <small class="p-text-secondary">{{ event.date }}</small>
+                            </ng-template>
+                            <ng-template pTemplate="opposite" let-event>
+                                {{ event.status }}
+                            </ng-template>
+
+                        </p-timeline>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

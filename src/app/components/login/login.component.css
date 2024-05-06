@@ -1,0 +1,14 @@
+.p-card-body, .p-card-content {
+    padding-top: 0 !important;
+}
+
+.backgroun-login {
+    background-image: url('../../../assets/bgNacional.png');
+    background-size : cover;
+    height: 100vh;
+    width: 100vw;
+    overflow:auto;
+    /* 
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,10,0,1) 0%, rgba(255,10,0,1) 45%, rgba(255,255,255,1) 100%); */
+}
