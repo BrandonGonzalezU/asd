@@ -64,6 +64,22 @@ export class DashboardComponent implements OnInit {
     this.visible = true;
   }
 
+  goToHallazgosResumen() {
+    console.log('Hallazgos Resumen');
+    this.router.navigate(['/hallazgos-resumen']);
+  }
+
+  goToPetResumen() {
+    console.log('PET Resumen');
+    this.router.navigate(['/pet-resumen']);
+  }
+
+  goToAnomaliasResumen() {
+    console.log('Anomalias Resumen');
+    this.router.navigate(['/anomalias-resumen']);
+  }
+
+
   ngOnInit() {
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
