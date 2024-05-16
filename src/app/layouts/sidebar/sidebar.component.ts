@@ -35,6 +35,10 @@ export class SidebarComponent {
     this.router.navigate(['/dashboard']);
   }
 
+  goToEmbarcaciones() {
+    console.log('Embarcaciones Dashboard');
+    this.router.navigate(['/embarcaciones-dashboard']);
+  }
 
 
 

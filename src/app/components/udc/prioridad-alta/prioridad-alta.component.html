@@ -1,0 +1,336 @@
+<div class="layout-content">
+    <div class="logo">
+        <img class="h-7rem ml-3" src="../../../../assets/Felipe.png">
+    </div>
+    <div class="grid">
+        <div class="col-12 md:col-12 ">
+            <div
+                class="headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center">
+                <div class=" p-2 flex flex-wrap">
+                    <span class="flex justify-content-center align-items-center text-orange-700 text-xl
+                font-semibold line-height-1 mb-2">
+                        UDC En prioridad Alta Total 23727</span>
+                    <span class=" text-gray-500 text-base font-semibold line-height-1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <div class="col-9 p-2 flex flex-wrap justify-content-end align-items-center gap-2">
+                    <!-- <div class="flex mb-2 gap-2 justify-content-end">
+                    <p-button (click)="activeIndex = 0" rounded="true" styleClass="w-8rem h-2rem p-0 pr-2"
+                        [outlined]="activeIndex !== 0" label="ABKATUN-A" />
+                    <p-button (click)="activeIndex = 1" rounded="true" styleClass="w-8rem h-2rem p-0"
+                        [outlined]="activeIndex !== 1" label="ABKATUN-D" />
+                    <p-button (click)="activeIndex = 2" rounded="true" styleClass="w-8rem h-2rem p-0"
+                        [outlined]="activeIndex !== 2" label="ABKATUN-N1" />
+                    <p-button (click)="activeIndex = 3" rounded="true" styleClass="w-5rem h-2rem p-0"
+                        [outlined]="activeIndex !== 3" label="LITORAL" />
+                    <p-button (click)="activeIndex = 4" rounded="true" styleClass="w-5rem h-2rem p-0"
+                        [outlined]="activeIndex !== 4" label="POL-A" />
+                </div> -->
+                </div>
+            </div>
+            <div class="flex">
+                <div class="col-12 md:col-4 p-0 pr-2">
+                    <div (click)="Terminadas()"
+                        class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                        <span class="text-sm font-medium line-height-1">
+                            TERMINADA
+                        </span>
+                        <div class="flex justify-content-between">
+                            <div class="flex justify-content-between align-items-center">
+                                <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                    style="background-color: #8adb7e; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                    <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                        class="line-height-2 text-white">1670</span>
+                                </div>
+                                <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                        3179 Total</span>
+                                </div>
+                            </div>
+                        </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                    </div>
+                </div>
+
+                <p-dialog header="UDC Terminadas" [modal]="true" [(visible)]="visibleTerminadas"
+                    [style]="{ width: '85rem' }">
+
+                    <div class="flex col-12 p-0 pt-2 pr-2">
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div (click)="goToUDC()"
+                                class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    DEUDA </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">705</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                1175</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    FLUJO POR POLITICA DE PAGO </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">57</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                1158</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    TECHO INERCIAL </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">805</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                843</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                    </div>
+
+                </p-dialog>
+
+                <div class="col-12 md:col-4 p-0 pr-2">
+                    <div (click)="Canceladas()">
+                        <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                            <span class="text-sm font-medium line-height-1">
+                                CANCELADAS </span>
+                            <div class="flex justify-content-between">
+                                <div class="flex justify-content-between align-items-center">
+                                    <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                        style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                        <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                            class="line-height-2 text-white">2</span>
+                                    </div>
+                                    <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                            53</span>
+                                    </div>
+                                </div>
+                            </div><img src="../../../assets/rate.svg" class="absolute"
+                                style="bottom: 14px; right: 12px;">
+                        </div>
+                    </div>
+                </div>
+
+                <p-dialog header="UDC Canceladas" [modal]="true" [(visible)]="visibleCanceladas"
+                    [style]="{ width: '85rem' }">
+
+                    <div class="flex col-12 p-0 pt-2 pr-2">
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    SIN RECURSO </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">12</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                24</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    TECHO INERCIAL </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">14</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                29</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                    </div>
+
+                </p-dialog>
+
+                <div class="col-12 md:col-4 p-0 pr-2">
+                    <div (click)="sinRecurso()">
+                        <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                            <span class="text-sm font-medium line-height-1">
+                                SIN RECURSO </span>
+                            <div class="flex justify-content-between">
+                                <div class="flex justify-content-between align-items-center">
+                                    <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                        style="background-color: #bda518; box-shadow: 0px 6px 20px rgba(158, 145, 0, 0.605);">
+                                        <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                            class="line-height-2 text-white">438</span>
+                                    </div>
+                                    <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                            8989</span>
+                                    </div>
+                                </div>
+                            </div><img src="../../../assets/rate.svg" class="absolute"
+                                style="bottom: 14px; right: 12px;">
+                        </div>
+                    </div>
+                </div>
+                <p-dialog header="UDC Terminadas" [modal]="true" [(visible)]="visibleSinRecurso"
+                    [style]="{ width: '85rem' }">
+
+                    <div class="flex col-12 p-0 pt-2 pr-2">
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    DEUDA </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">250</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                370</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    FLUJO POR POLITICA DE PAGO </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">629</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                1101</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-4 p-0 pr-2">
+                            <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                                <span class="text-sm font-medium line-height-1">
+                                    TECHO INERCIAL </span>
+                                <div class="flex justify-content-between">
+                                    <div class="flex justify-content-between align-items-center">
+                                        <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                            style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                            <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                                class="line-height-2 text-white">11</span>
+                                        </div>
+                                        <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                                38</span>
+                                        </div>
+                                    </div>
+                                </div><img src="../../../assets/rate.svg" class="absolute"
+                                    style="bottom: 14px; right: 12px;">
+                            </div>
+                        </div>
+                    </div>
+
+                </p-dialog>
+
+            </div>
+            <div class="flex">
+                <div class="col-12 md:col-4 p-0 pr-2">
+                    <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                        <span class="text-sm font-medium line-height-1">
+                            EN PROCESO </span>
+                        <div class="flex justify-content-between">
+                            <div class="flex justify-content-between align-items-center">
+                                <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                    style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                    <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                        class="line-height-2 text-white">323</span>
+                                </div>
+                                <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                        570</span>
+                                </div>
+                            </div>
+                        </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-4 p-0 pr-2">
+                    <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                        <span class="text-sm font-medium line-height-1">
+                            EN PROGRAMA </span>
+                        <div class="flex justify-content-between">
+                            <div class="flex justify-content-between align-items-center">
+                                <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                    style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                    <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                        class="line-height-2 text-white">582</span>
+                                </div>
+                                <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                        8804</span>
+                                </div>
+                            </div>
+                        </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                    </div>
+                </div>
+
+                <div class="col-12 md:col-4 p-0 pr-2">
+                    <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                        <span class="text-sm font-medium line-height-1">
+                            Suspendida </span>
+                        <div class="flex justify-content-between">
+                            <div class="flex justify-content-between align-items-center">
+                                <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                    style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                    <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                        class="line-height-2 text-white">3290</span>
+                                </div>
+                                <div class="line-height-4 text-4xl"> <span class="text-2xl">
+                                        9397</span>
+                                </div>
+                            </div>
+                        </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

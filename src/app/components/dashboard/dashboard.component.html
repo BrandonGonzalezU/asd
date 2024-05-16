@@ -1,11 +1,14 @@
-<app-header></app-header>
 <div class="flex ">
     <app-sidebar></app-sidebar>
     <div class="layout-content">
         <div class="grid">
-
+            <div class="logo">
+                <img class="h-7rem ml-3" src="../../../../assets/Felipe.png">
+            </div>
             <div class="col-12 md:col-4">
-                <div class="card relative h-6rem border-round-xl p-3"><span class="text-sm font-medium line-height-1">
+                <div (click)="goToHallazgosResumen()"
+                    class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"><span
+                        class="text-sm font-medium line-height-1">
                         HALLAZGOS DE MAYO </span>
                     <div class="flex justify-content-between">
                         <div class="flex justify-content-between align-items-center">
@@ -20,22 +23,26 @@
             </div>
 
             <div class="col-12 md:col-4">
-                <div class="card relative h-6rem border-round-xl p-3"><span class="text-sm font-medium line-height-1">
-                        EN PRIORIDAD ALTA </span>
+                <div (click)="goToPetResumen()"
+                    class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer"><span
+                        class="text-sm font-medium line-height-1">
+                        Cambios PET </span>
                     <div class="flex justify-content-between">
                         <div class="flex justify-content-between align-items-center">
                             <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
                                 style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(11, 209, 138, 0.3);">
                                 <i class="pi pi-arrow-up w-2rem"></i><span class="line-height-2">35%</span>
                             </div>
-                            <div class="line-height-4 text-4xl">355 UDC</div>
+                            <div class="line-height-4 text-4xl">18204 Rezagadas</div>
                         </div>
                     </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
                 </div>
             </div>
 
             <div class="col-12 md:col-4">
-                <div class="card relative h-6rem border-round-xl p-3"><span class="text-sm font-medium line-height-1">
+                <div (click)="goToAnomaliasResumen()"
+                    class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer"><span
+                        class="text-sm font-medium line-height-1">
                         ANOMALIAS TERMINADAS </span>
                     <div class="flex justify-content-between">
                         <div class="flex justify-content-between align-items-center">
@@ -160,6 +167,8 @@
                     </div>
                 </div>
             </div>
+
+
 
         </div>
     </div>

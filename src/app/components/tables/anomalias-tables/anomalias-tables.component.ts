@@ -18,7 +18,6 @@ export class AnomaliasTablesComponent {
 
   activityValues: number[] = [0, 100];
 
-  searchValue: string | undefined;
 
   Plataformas = [
     {
@@ -89,7 +88,7 @@ export class AnomaliasTablesComponent {
       id: '49',
       Sistema: 'N/A',
       idIdent: 'PTB0364',
-      idSistema: 'HA00000000002175',
+      idSistema: 'H2A00000000002175',
       nivelAuditoria: 'CMSH',
       noNoConformidad: 'CMSH-ABK-D-07/2023-09',
       plataforma: 'Abk-D Permanente',

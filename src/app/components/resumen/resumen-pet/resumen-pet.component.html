@@ -1,0 +1,345 @@
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="layout-content">
+        <div class="grid">
+            <div class="logo">
+                <img class="h-7rem ml-3" src="../../../../assets/Felipe.png">
+            </div>
+            <div
+                class="headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center">
+                <div class="col-3 p-2 flex flex-wrap ">
+                    <span
+                        class="flex justify-content-between align-items-center text-orange-700 text-xl font-semibold line-height-1 mb-2">Cambios
+                        del
+                        PET I Al PET II</span>
+                    <span class=" text-gray-500 text-base font-semibold line-height-1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </div>
+                <div class="col-9 p-2 flex flex-wrap justify-content-end align-items-center gap-2">
+
+                </div>
+
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div (click)="goToUdcPrioridadAlta()"
+                    class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        PRIORIDAD ALTA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">7328</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">19812 de Prioridad Alta</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        TERMINADAS </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(89, 255, 194, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">49</span>
+                            </div>
+                            <div class="line-height-4 text-4xl "> <span class="text-2xl">150 Terminadas</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0">
+
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        PROGRAMA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #ffdc41; box-shadow: 0px 6px 20px rgba(255, 255, 75, 0.3);">
+                                <i class="pi pi-plus w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">3250</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">11742 en Programa</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/quantity.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        EN PROCESO </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #41e2f7; box-shadow: 0px 6px 20px rgba(201, 249, 255, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">259</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl ">614 En Proceso</span></div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        SIN RECURSO </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #ff0000; box-shadow: 0px 6px 20px rgba(255, 47, 47, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">3850</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">8897 Sin Recursos</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        SUSPENDIDA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #fe6565; box-shadow: 0px 6px 20px rgba(255, 128, 128, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">132</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">320 Suspendidas</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        CANCELADAS </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #4d4d4d; box-shadow: 0px 6px 20px rgba(117, 117, 117, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">15</span>
+                            </div>
+                            <div class="line-height-4 text-4xl "> <span class="text-2xl">54 Canceladas</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0">
+
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        PRIORIDAD BAJA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #ffdc41; box-shadow: 0px 6px 20px rgba(255, 255, 75, 0.3);">
+                                <i class="pi pi-plus w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">230</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">695 de Prioridad Baja</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/quantity.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        PRIORIDAD MEDIA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #41e2f7; box-shadow: 0px 6px 20px rgba(201, 249, 255, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">1927</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl ">3220 de Prioridad Media</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <!-- <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC DE DUCTOS </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(11, 209, 138, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">672</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">2730 Total</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC DE INGENIERIA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">28</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">193 Total</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC DE MANTENIMIENTO </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(89, 255, 194, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">8638</span>
+                            </div>
+                            <div class="line-height-4 text-4xl "> <span class="text-2xl">18270 Total</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0">
+
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC DE MANTTO PERF </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #ffdc41; box-shadow: 0px 6px 20px rgba(255, 255, 75, 0.3);">
+                                <i class="pi pi-plus w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">108</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">795 Total</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/quantity.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC NUEVAS PET II </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #41e2f7; box-shadow: 0px 6px 20px rgba(201, 249, 255, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">3949</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl ">27,676 Total</span></div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        TERMINADA PERO CON DEUDA </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(11, 209, 138, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">49</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">508 Total</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC REPETIDAS </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #f74141; box-shadow: 0px 6px 20px rgba(205, 46, 46, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">5</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">17 en Total</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/rate.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0 pr-2">
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        UDC REZAGADAS DEL PET ANTERIOR </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="margin-right: 12px; background-color: #0bd18a; box-shadow: 0px 6px 20px rgba(89, 255, 194, 0.3);">
+                                <i class="pi pi-arrow-up w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">7650</span>
+                            </div>
+                            <div class="line-height-4 text-4xl "> <span class="text-2xl">18204</span></div>
+                        </div>
+                    </div><img src="../../../assets/value.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div>
+
+            <div class="col-12 md:col-4 p-0">
+
+                <div class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer">
+                    <span class="text-sm font-medium line-height-1">
+                        CAMBIO DE SIN RECURSO A RECURSO </span>
+                    <div class="flex justify-content-between">
+                        <div class="flex justify-content-between align-items-center">
+                            <div class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                                style="background-color: #ffdc41; box-shadow: 0px 6px 20px rgba(255, 255, 75, 0.3);">
+                                <i class="pi pi-plus w-2rem text-white"></i><span
+                                    class="line-height-2 text-white">359</span>
+                            </div>
+                            <div class="line-height-4 text-4xl"> <span class="text-2xl">1020 Total</span>
+                            </div>
+                        </div>
+                    </div><img src="../../../assets/quantity.svg" class="absolute" style="bottom: 14px; right: 12px;">
+                </div>
+            </div> -->
+
+
+        </div>
+    </div>
+</div>

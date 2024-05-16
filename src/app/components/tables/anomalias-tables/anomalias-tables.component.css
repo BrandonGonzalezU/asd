@@ -11,7 +11,7 @@
     margin-left: 23rem;
     margin-top: 1rem;
     width: 80vw;
-    height: 89.5vh;
+    min-height: 89vh;
 }
 
 .card {
