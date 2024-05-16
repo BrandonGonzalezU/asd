@@ -65,3 +65,7 @@
     transition: all 0.4s;
     z-index: 1;
 }
+
+p-chart {
+    height: 60vh;
+}

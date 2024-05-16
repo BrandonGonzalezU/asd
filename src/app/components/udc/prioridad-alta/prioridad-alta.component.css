@@ -8,10 +8,10 @@
 }
 
 .layout-content {
-    margin-left: 22.5rem;
+    margin-left: 23rem;
     margin-top: 1rem;
     width: 80vw;
-    min-height: 89vh;
+    min-height: 88.6vh;
     position: relative;
 }
 
@@ -27,54 +27,6 @@
     padding: 16px;
     box-sizing: border-box;
     margin-bottom: 8px;
-}
-
-:host ::ng-deep .p-timeline.p-timeline-horizontal .p-timeline-event-opposite {
-    display: none;
-}
-
-:host ::ng-deep .p-timeline.p-timeline-horizontal .p-timeline-event-separator {
-    display: none;
-}
-
-:host ::ng-deep .p-component {
-    border-radius: 5%;
-}
-
-
-:host ::ng-deep .p-timeline-horizontal {
-    flex-direction: row;
-    width: 55.6vw;
-    height: 1rem;
-    margin-left: 1.5vw;
-}
-
-:host ::ng-deep .frenteFrio {
-    background-color: rgb(171, 196, 196);
-    width: 1.85vw;
-    height: 2vh;
-}
-
-:host ::ng-deep .operando {
-    background-color: rgb(51, 255, 0);
-    width: 1.85vw;
-    height: 2vh;
-}
-
-:host ::ng-deep .fueraOperacion {
-    background-color: rgb(233, 75, 75);
-    width: 1.69vw;
-    height: 2vh;
-}
-
-
-
-.diasOperando {
-    display: none;
-}
-
-.headerEmbarcacion {
-    min-width: 80vw;
 }
 
 .hallazgosLeft {
@@ -108,4 +60,16 @@
     box-shadow: 10px 10px rgba(86, 86, 86, 0.184);
     transition: all 0.4s;
     z-index: 1;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-content {
+    background: linear-gradient(180deg, #fbf5f5 0%, #f4f4fc 100%);
+
+    padding: 0 1.5rem 2rem 1.5rem;
+}
+
+:host ::ng-deep .p-dialog .p-dialog-header {
+    background: linear-gradient(180deg, #fbf5f5 0%, #f4f4fc 100%);
+
+    padding: 0 1.5rem 2rem 1.5rem;
 }

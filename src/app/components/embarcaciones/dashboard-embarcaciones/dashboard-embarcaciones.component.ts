@@ -6,11 +6,12 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
 import { plugins } from 'chart.js';
+import { TimelineModule } from 'primeng/timeline';
 
 @Component({
   selector: 'app-dashboard-embarcaciones',
   standalone: true,
-  imports: [SidebarComponent, HeaderComponent, TabViewModule, CommonModule, ButtonModule, ChartModule],
+  imports: [SidebarComponent, HeaderComponent, TabViewModule, CommonModule, ButtonModule, ChartModule, TimelineModule],
   templateUrl: './dashboard-embarcaciones.component.html',
   styleUrl: './dashboard-embarcaciones.component.css'
 })
@@ -20,6 +21,10 @@ export class DashboardEmbarcacionesComponent implements OnInit {
     gerencia: string, nombre: string, contenido: string, programadas: string, realizado: string, rezago: string,
     fueraDePrograma: string
   }[] = [];
+  //Timeline climatologico
+  eventsArtemis: string[];
+  eventsCrestTarasco: string[];
+  //Datas de cada embarcacion
   dataArtemis: any;
   dataArtemisStatus: any;
   dataCrestTarasco: any;
@@ -34,7 +39,22 @@ export class DashboardEmbarcacionesComponent implements OnInit {
   dataBluePioonerStatus: any;
   options: any;
 
+  constructor() {
+    this.eventsArtemis = [
+      "OP", "OP", "OP", "OP", "OP", "OP", "OP", "FF", "FF", "FF", "OP", "OP", "FF", "FF", "OP", "FF", "FF", "FF", "FF",
+      "FF", "FF", "FF", "FO", "FO", "FO", "FO", "FO", "FO", "FO", "FO", "FO"
+    ];
+    this.eventsCrestTarasco = [
+      "FO", "FO", "FO", "FO", "FO", "FO", "FO", "FO", "FO", "FO", "FF", "FF", "FF", "OP", "OP", "OP", "OP", "OP", "OP",
+      "OP", "OP", "FF", "FF", "FF", "OP", "OP", "OP", "OP", "OP", "OP", "OP"
+    ];
+
+
+  }
+
+
   ngOnInit() {
+
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
     const textColorSecondary = documentStyle.getPropertyValue('--text-color-secondary');
@@ -296,4 +316,6 @@ export class DashboardEmbarcacionesComponent implements OnInit {
     };
 
   }
+
 }
+

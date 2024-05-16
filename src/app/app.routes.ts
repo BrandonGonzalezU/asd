@@ -8,6 +8,7 @@ import { ResumenHallazgosComponent } from './components/resumen/resumen-hallazgo
 import { ResumenPetComponent } from './components/resumen/resumen-pet/resumen-pet.component';
 import { ResumenAnomaliasComponent } from './components/resumen/resumen-anomalias/resumen-anomalias.component';
 import { DashboardEmbarcacionesComponent } from './components/embarcaciones/dashboard-embarcaciones/dashboard-embarcaciones.component';
+import { PrioridadAltaComponent } from './components/udc/prioridad-alta/prioridad-alta.component';
 
 export const routes: Routes = [
     { path: '', title: "Login", component: LoginComponent },
@@ -21,6 +22,7 @@ export const routes: Routes = [
     { path: 'pet-resumen', title: "PET Resumen", component: ResumenPetComponent },
     { path: 'anomalias-resumen', title: "Anomalías Resumen", component: ResumenAnomaliasComponent },
     { path: 'embarcaciones-dashboard', title: "Embarcaciones Dashboard", component: DashboardEmbarcacionesComponent },
+    { path: 'udc-prioridad-alta', title: "Udc Prioridad Alta", component: PrioridadAltaComponent },
 
 
     { path: '**', component: LoginComponent },  // Wildcard route for a 404 page

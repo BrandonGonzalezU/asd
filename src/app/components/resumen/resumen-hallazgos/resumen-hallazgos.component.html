@@ -1,4 +1,3 @@
-<app-header></app-header>
 <div class="flex">
     <app-sidebar></app-sidebar>
     <div class="layout-content">
@@ -42,7 +41,82 @@
                                     </div>
 
                                 </div>
-                                <div class="col-12 md:col-4 p-0 pr-2">
+
+                                <div class="flex justify-content-between col-12 p-0 pr-2 gap-2"
+                                    *ngIf="complejo.contenido == 'dataAbkatunA'">
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="hallazgosAbkatunA" [options]="options"
+                                            height="60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="tiposHallazgosAbkatunA" [options]="options"
+                                            height="60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="accionCorrectivaAbkatunA" [options]="options"
+                                            height="60vh" />
+                                    </div>
+                                </div>
+                                <div class="flex justify-content-between col-12 p-0 pr-2 gap-2"
+                                    *ngIf="complejo.contenido == 'dataAbkatunD'">
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="hallazgosAbkatunD" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="tiposHallazgosAbkatunD" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="accionCorrectivaAbkatunD" [options]="options"
+                                            height=" 60vh" />
+                                    </div>
+                                </div>
+                                <div class="flex justify-content-between col-12 p-0 pr-2 gap-2"
+                                    *ngIf="complejo.contenido == 'dataAbkatunN1'">
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="hallazgosAbkatunN1" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="tiposHallazgosAbkatunN1" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="accionCorrectivaAbkatunN1" [options]="options"
+                                            height=" 60vh" />
+                                    </div>
+                                </div>
+                                <div class="flex justify-content-between col-12 p-0 pr-2 gap-2"
+                                    *ngIf="complejo.contenido == 'dataLitoral'">
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="Litoral" [options]="options" height=" 60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="tiposHallazgosLitoral" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="accionCorrectivaLitoral" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                </div>
+                                <div class="flex justify-content-between col-12 p-0 pr-2 gap-2"
+                                    *ngIf="complejo.contenido == 'dataPolA'">
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="PolA" [options]="options" height=" 60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="tiposHallazgosPolA" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                    <div class="col-4 card">
+                                        <p-chart type="bar" [data]="accionCorrectivaPolA" [options]="options" height="
+                                            60vh" />
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-12 md:col-4 p-0 pr-2">
                                     <div class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer">
                                         <span class="text-sm font-medium line-height-1">
                                             HALLAZGOS TIPO 5 </span>
@@ -344,9 +418,9 @@
                                         </div><img src="../../../assets/rate.svg" class="absolute"
                                             style="bottom: 14px; right: 12px;">
                                     </div>
-                                </div>
+                                </div> -->
 
-                                <div class="col-12 md:col-4 p-0 pr-2">
+                                <!-- <div class="col-12 md:col-4 p-0 pr-2">
                                     <div
                                         class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer">
                                         <span class="text-sm font-medium line-height-1">
@@ -431,7 +505,8 @@
                                         </div><img src="../../../assets/quantity.svg" class="absolute"
                                             style="bottom: 14px; right: 12px;">
                                     </div>
-                                </div>
+                                </div> -->
+
                             </div>
                         </p-tabPanel>
                     </p-tabView>
