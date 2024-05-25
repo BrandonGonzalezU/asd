@@ -1,0 +1,49 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/webApp/dist
+/webApp/tmp
+/webApp/out-tsc
+/webApp/bazel-out
+
+# Node
+/webApp/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+/webApp/.vscode/*
+/webApp/!.vscode/settings.json
+/webApp/!.vscode/tasks.json
+/webApp/!.vscode/launch.json
+/webApp/!.vscode/extensions.json
+/webApp/.history/*
+
+# Miscellaneous
+/webApp/.angular/cache
+/webApp/.sass-cache/
+/webApp/connect.lock
+/webApp/coverage
+/webApp/libpeerconnection.log
+/webApp/testem.log
+/webApp/typings
+
+# System files
+/webApp/.DS_Store
+/webApp/Thumbs.db
+
+
+
+############################################## WEB APIs #########################################
+
+/webApi/.vs
+/webApi/bin

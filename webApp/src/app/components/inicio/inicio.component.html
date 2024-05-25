@@ -1,0 +1,96 @@
+<app-header></app-header>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="layout-content">
+    <div class="logo">
+      <img class="h-7rem ml-3" src="../../../../assets/Felipe.png" />
+    </div>
+    <div class="grid">
+      <div class="col-12 md:col-12">
+        <div
+          class="card relative h-6rem border-round-xl flex justify-content-center align-items-center"
+        >
+          <span
+            class="flex justify-content-between align-items-center text-orange-700 text-4xl font-bold line-height-1 mb-2"
+            >Menu principal
+          </span>
+        </div>
+      </div>
+      <div class="col-12 md:col-3 relative">
+        <div
+          
+          class="bg-cover ReportesDiariosMenu centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-between align-items-center"
+          style="
+            
+            background-size: 27vw;
+            height: 25vh;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-between align-items-center text-black text-3xl font-bold line-height-1 mb-2 absolute"
+          >Reportes Diarios
+        </span>
+      </div>
+      <div class="col-12 md:col-3 relative">
+        <div
+          (click)="goToCentrosDeProceso()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-between align-items-center"
+          style="
+            
+            background-size: 27vw;
+            height: 25vh;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-3xl font-bold line-height-1 mb-2 absolute"
+          >PEM
+        </span>
+      </div>
+      <div class="col-12 md:col-3 relative">
+        <div
+          (click)="goToPetResumen()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-between align-items-center"
+          style="
+            
+            background-size: 27vw;
+            height: 25vh;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-between align-items-center text-black text-3xl font-bold line-height-1 mb-2 absolute"
+          >PET 2024
+        </span>
+      </div>
+      <div class="col-12 md:col-3 relative">
+        <div
+          (click)="goToHallazgosResumen()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-center align-items-center"
+          style="
+            
+            background-size: 27vw;
+            height: 25vh;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-3xl font-bold line-height-1 mb-2 absolute"
+          >HIM
+        </span>
+      </div>
+      <div class="col-12 md:col-3 relative">
+        <div
+          (click)="goToAnomaliasResumen()"
+          class="centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-center align-items-center"
+          style="
+            
+            background-size: 27vw;
+            height: 25vh;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-3xl font-bold line-height-1 mb-2 absolute"
+          >Anomalias
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

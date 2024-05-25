@@ -1,0 +1,57 @@
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    width: 100%;
+}
+
+.layout-content {
+    margin-left: 23rem;
+    margin-top: 1rem;
+    width: 80vw;
+    min-height: 89vh;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    width: 80vw;
+}
+
+.p-datatable-table {
+    border-spacing: 0px;
+    width: 100%;
+}
+
+th {
+    text-align: left;
+    padding: 0.571rem 0.571rem;
+    border: 1px solid rgba(68, 72, 109, 0.17);
+    border-width: 0 0 1px 0;
+    font-weight: 500;
+    color: #8A8EA6;
+    background: #ffffff;
+    transition: box-shadow 0.2s;
+    border-width: 1px 0 1px 1px;
+
+    &:last-child {
+        border-width: 1px;
+    }
+}
+
+td {
+    text-align: left;
+    border: 1px solid rgba(68, 72, 109, 0.17);
+    border-width: 0 0 0 0;
+    padding: 0.429rem 0.571rem;
+    border-width: 0 0 1px 1px;
+
+    &:last-child {
+        border-width: 0 1px 1px 1px;
+    }
+}
