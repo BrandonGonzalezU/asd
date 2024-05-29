@@ -1,0 +1,159 @@
+<app-header></app-header>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="layout-content">
+    <div class="logo">
+      <img class="h-7rem ml-3" src="../../../../assets/Felipe.png" />
+    </div>
+    <div class="grid">
+      <div class="col-12 md:col-12">
+        <div
+          class="headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center"
+        >
+          <div class="col-3">
+            <div class="col-12 p-0 m-0">
+              <span
+                class="flex justify-content-between align-items-center text-orange-700 text-xl font-semibold line-height-1 mb-2"
+                >HIMS</span
+              >
+            </div>
+            <div class="col-12 p-0">
+              <span class="text-gray-500 text-base font-semibold line-height-1"
+                >Mes de {{ mesSeleccionado }}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 md:col-12">
+          <div class="col-12 p-0" *ngFor="let embarcacion of informacionCP">
+            <div
+              *ngIf="dataDinamica === embarcacion.data"
+              class="card justify-content-center"
+            >
+              <div class="col-12 flex">
+                <div class="col-6">
+                  <span
+                    class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
+                    >Embarcacion
+                  </span>
+                </div>
+                <div class="col-6">
+                  <span
+                    class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
+                    >Cuadrillas
+                  </span>
+                </div>
+              </div>
+
+              <div
+                *ngIf="dataDinamica === 'dataCrestTarasco'"
+                class="col-12 flex gap-1"
+              >
+                <p-chart
+                  class="col-6"
+                  id="{{ dataDinamica }}  "
+                  type="bar"
+                  [data]="dataCrestTarasco"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+                <p-chart
+                  class="col-6"
+                  id="{{ dataDinamica }}  "
+                  type="bar"
+                  [data]="dataCrestTarascoCuadrilla"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+              </div>
+
+              <div
+                *ngIf="dataDinamica === 'dataDosBocas'"
+                class="col-12 flex gap-1"
+              >
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataDosBocas"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataDosBocasCuadrilla"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+              </div>
+
+              <div
+                *ngIf="dataDinamica === 'dataToisaProteus'"
+                class="col-12 flex gap-1"
+              >
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataToisaProteus"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataToisaProteusCuadrilla"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+              </div>
+
+              <div
+                *ngIf="dataDinamica === 'dataBlueStingray'"
+                class="col-12 flex gap-1"
+              >
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataBlueStingray"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataBlueStingrayCuadrilla"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+              </div>
+
+              <div
+                *ngIf="dataDinamica === 'dataBluePioneer'"
+                class="col-12 flex gap-1"
+              >
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataBluePioneer"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+
+                <p-chart
+                  class="col-6"
+                  type="bar"
+                  [data]="dataBluePioneerCuadrilla"
+                  [options]="options"
+                  (onDataSelect)="selectData($event)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
