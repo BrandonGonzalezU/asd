@@ -1,0 +1,178 @@
+<app-header></app-header>
+<div class="flex">
+    <app-sidebar></app-sidebar>
+    <div class="layout-content">
+        <div class="logo">
+            <img class="h-7rem ml-3" src="../../../../assets/Felipe.png">
+        </div>
+        <div class="grid">
+            <div class="col-12 md:col-12">
+                <div
+                    class="headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center">
+                    <div class="col-2 p-2  ">
+                        <span
+                            class="flex justify-content-between align-items-center text-orange-700 text-xl font-semibold line-height-1 mb-2">
+                            {{this.centroDeProceso}}
+                        </span>
+                        <span class="flex text-gray-500 text-base font-semibold line-height-1">
+                            {{this.embarcacion}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    </div>
+
+                    <div
+                        class="col-8 p-2 flex flex-wrap justify-content-center align-items-center gap-2 text-orange-700 text-xl font-semibold line-height-1 mb-2">
+                        Actividades programadas
+                    </div>
+
+                    <div
+                        class="col-2 p-2 flex flex-wrap justify-content-end align-items-center gap-2 text-orange-700 text-xl font-semibold line-height-1 mb-2">
+                        {{this.dia}} de Abril del 2024
+                    </div>
+                </div>
+
+                <div class=" flex gap-3 col-12 md:col-12">
+                    <div class="card col-6 md:col-6">
+                        <div
+                            class="col-12 p-2 flex flex-wrap justify-content-center align-items-center gap-2 text-orange-700 text-xl font-semibold line-height-1 mb-2">
+                            Actividades por embarcación
+                        </div>
+                        <p-table [value]="embarcaciones" #dt1 dataKey="csu" [rows]="8"
+                            [rowsPerPageOptions]="[10, 25, 50]" [paginator]="true" [scrollable]="true"
+                            scrollHeight="780px" [globalFilterFields]="[]">
+
+                            <!-- <ng-template pTemplate="caption">
+                                <div class="flex">
+                                    <p-button label="Clear" [outlined]="true" icon="pi pi-filter-slash"
+                                        (click)="clear(dt1)" />
+                                    <span class="p-input-icon-left ml-auto">
+                                        <i class="pi pi-search"></i>
+                                    </span>
+                                </div>
+                            </ng-template> -->
+
+                            <ng-template pTemplate="header">
+                                <tr class=" ng-star-inserted">
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            PEM
+                                            <p-columnFilter type="text" field="pem" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Rubro
+                                            <p-columnFilter type="text" field="rubro" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Servicio
+                                            <p-columnFilter type="text" field="servicio" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Inst
+                                            <p-columnFilter type="text" field="inst" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Recurso
+                                            <p-columnFilter type="text" field="recurso" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            CSU
+                                            <p-columnFilter type="text" field="csu" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Inicio Prog
+                                            <p-columnFilter type="date" field="inicioProg" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Fin Prog
+                                            <p-columnFilter type="date" field="finProg" display="menu" />
+                                        </div>
+                                    </th>
+
+                                    <th style="min-width:5rem">
+                                        <div class="flex align-items-center">
+                                            Estatus
+                                            <p-columnFilter type="text" field="estatus" display="menu" />
+                                        </div>
+                                    </th>
+                                </tr>
+                            </ng-template>
+
+                            <ng-template pTemplate="body" let-embarcacion>
+                                <tr class="">
+                                    <td>{{ embarcacion.pem }}</td>
+                                    <td>{{ embarcacion.rubro }}</td>
+                                    <td>{{ embarcacion.servicio }}</td>
+                                    <td>{{ embarcacion.inst }}</td>
+                                    <td>{{ embarcacion.recurso }}</td>
+                                    <td>{{ embarcacion.csu }}</td>
+                                    <!-- <td>{{ embarcacion.actividad }}</td> -->
+                                    <td>{{ embarcacion.inicioProg }}</td>
+                                    <td>{{ embarcacion.finProg }}</td>
+                                    <td>{{ embarcacion.estatus }}</td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+
+                    <div class="card col-6 md:col-6">
+                        <div
+                            class="col-12 p-2 flex flex-wrap justify-content-center align-items-center gap-2 text-orange-700 text-xl font-semibold line-height-1 mb-2">
+                            Actividades por cuadrillas
+                        </div>
+                        <p-table [value]="cuadrillas" #dt1 dataKey="csu" [rows]="8" [rowsPerPageOptions]="[10, 25, 50]"
+                            [paginator]="true" [scrollable]="true" scrollHeight="780px" [globalFilterFields]="[]">
+
+                            <ng-template pTemplate="header">
+                                <tr class=" ng-star-inserted">
+                                    <th *ngFor="let col of cols" style="min-width: 8rem;">
+                                        <div class=" flex justify-content-between
+                                            align-items-center">
+                                            {{ col.header }}
+                                            <p-columnFilter type="text" field="id" display="menu" />
+                                        </div>
+                                    </th>
+                                </tr>
+                            </ng-template>
+
+                            <ng-template pTemplate="body" let-cuadrilla>
+                                <tr>
+                                    <td>{{ cuadrilla.pem }}</td>
+                                    <td>{{ cuadrilla.rubro }}</td>
+                                    <td>{{ cuadrilla.servicio }}</td>
+                                    <td>{{ cuadrilla.inst }}</td>
+                                    <td>{{ cuadrilla.recurso }}</td>
+                                    <td>{{ cuadrilla.csu }}</td>
+                                    <!-- <td>{{ cuadrilla.actividad }}</td> -->
+                                    <td>{{ cuadrilla.inicioProg }}</td>
+                                    <td>{{ cuadrilla.finProg }}</td>
+                                    <td>{{ cuadrilla.estatus }}</td>
+                                </tr>
+                            </ng-template>
+                        </p-table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

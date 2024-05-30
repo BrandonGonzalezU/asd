@@ -1,0 +1,118 @@
+<app-header></app-header>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="layout-content">
+    <div class="logo">
+      <img class="h-7rem ml-3" src="../../../../assets/Felipe.png" />
+    </div>
+    <div class="grid">
+      <div class="col-12 md:col-12">
+        <div
+          class="card relative h-6rem border-round-xl flex justify-content-center align-items-center"
+        >
+          <span
+            class="flex justify-content-between align-items-center text-orange-700 text-4xl font-bold line-height-1 mb-2"
+            >Centros de Proceso
+          </span>
+        </div>
+      </div>
+      <div class="col-12 md:col-4 relative">
+        <div
+          (click)="goToCentroLitoralA()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-between align-items-center"
+          style="
+            background-image: url('../../../../assets/Litoral-A.jpeg');
+            background-size: 27vw;
+            height: 35vh;
+            opacity: 60%;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-between align-items-center text-black text-4xl font-bold line-height-1 mb-2 absolute"
+          >Litoral-A
+        </span>
+      </div>
+      <div class="col-12 md:col-4 relative">
+        <div
+          (click)="goToCentroDosBocas()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-between align-items-center"
+          style="
+            background-image: url('../../../../assets/dos-bocas.jpg');
+            background-size: 27vw;
+            height: 35vh;
+            opacity: 60%;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-4xl font-bold line-height-1 mb-2 absolute"
+          >Terminal Marítima Dos Bocas
+        </span>
+      </div>
+      <div class="col-12 md:col-4 relative">
+        <div
+          (click)="goToCentroAbkatunA()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-between align-items-center"
+          style="
+            background-image: url('../../../../assets/Abkatun-A.jpeg');
+            background-size: 27vw;
+            height: 35vh;
+            opacity: 60%;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-between align-items-center text-black text-4xl font-bold line-height-1 mb-2 absolute"
+          >Abkatun-A
+        </span>
+      </div>
+      <div class="col-12 md:col-4 relative">
+        <div
+          (click)="goToCentroPolA()"
+          class="bg-cover centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-center align-items-center"
+          style="
+            background-image: url('../../../../assets/Pol-A.jpeg');
+            background-size: 27vw;
+            height: 35vh;
+            opacity: 60%;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-4xl font-bold line-height-1 mb-2 absolute"
+          >Pol-A
+        </span>
+      </div>
+      <div class="col-12 md:col-4 relative">
+        <div
+          (click)="goToCentroAbkatunN1()"
+          class="centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-center align-items-center"
+          style="
+            background-image: url('../../../../assets/AbkatunN1.jpeg');
+            background-size: 27vw;
+            height: 35vh;
+            opacity: 60%;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-4xl font-bold line-height-1 mb-2 absolute"
+          >Abkatun-N1
+        </span>
+      </div>
+
+      <div class="col-12 md:col-4 relative">
+        <div
+          
+          class="centros-proceso-menu bg-no-repeat card relative border-round-xl flex justify-content-center align-items-center"
+          style="
+            background-image: url('../../../../assets/Satelites.jpeg');
+            background-size: 30vw;
+            height: 35vh;
+            opacity: 60%;
+          "
+        ></div>
+        <span
+          class="select-none centros-proceso-menu-text flex justify-content-center align-items-center text-black text-4xl font-bold line-height-1 mb-2 absolute"
+          >Plataformas Satélites
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

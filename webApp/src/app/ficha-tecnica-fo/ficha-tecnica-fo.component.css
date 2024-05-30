@@ -1,0 +1,79 @@
+
+.fichaTecnica{
+ 
+    margin: 1rem 1rem 0 1rem;
+    border-radius: 2rem;
+}
+
+.tablaUdc{
+    width: 100%;
+    background-color: #eff3f8;
+}
+
+
+
+.cell{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    border-right: 1px solid rgb(199, 199, 199);
+    &:last-child{
+        border: 0;
+    }
+}
+
+.cell th {
+    background-color: #f2f4f7;
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+    max-width: fit-content;
+
+}
+
+.cell td {
+    width: 100%;
+    padding: 0.5rem 0.3rem;
+    max-width: fit-content;
+
+}
+.grupo1{
+
+    width: 100%;
+
+}
+
+.grupo1, .grupo2, .grupo3, .grupo4 {
+    border-right: 1px solid rgb(199, 199, 199);
+    border-left: 1px solid rgb(199, 199, 199);
+    border-top: 1px solid rgb(199, 199, 199);
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.grupo4{
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    display: flex;
+    justify-content: space-around;
+}
+
+.grupo4 .cell:first-child{
+    border-bottom-left-radius: 1rem;
+}
+
+.headerFicha{
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #e5e7eb;
+    padding: 1.25rem;
+    background: #f9fafb;
+    color: #374151;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    justify-content: space-between;
+}
+.botonesReporte {
+} 

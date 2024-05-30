@@ -1,0 +1,46 @@
+.bodyApp {
+    background: linear-gradient(180deg, #fbf5f5 0%, #f4f4fc 100%);
+    min-height: 100vh;
+    min-width: 75vw;
+
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    margin-top: -1rem;
+    width: 100%;
+    min-height: 80vh;
+}
+
+.layout-content {
+    margin-left: 23rem;
+    margin-top: 1rem;
+    width: 80vw;
+
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
+    margin-bottom: 16px;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-panels {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav {
+    display: none;
+}
+
+.logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
