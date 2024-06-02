@@ -1,0 +1,667 @@
+<app-header></app-header>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="layout-content">
+    <div class="grid">
+      <div class="logo">
+        <img class="h-7rem ml-3" src="../../../../assets/Felipe.png" />
+      </div>
+
+      <div class="flex col-12">
+        <div class="col-12 md:col-4">
+          <div
+            class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+          >
+            <span class="text-sm font-medium line-height-1">
+              ACTIVIDADES PROGRAMADAS
+            </span>
+            <div class="flex justify-content-between">
+              <div class="flex justify-content-between align-items-center">
+                <div class="line-height-4 text-4xl">
+                  67 <span class="text-sm">Programadas Abril</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="../../../assets/rate.svg"
+              class="absolute"
+              style="bottom: 14px; right: 12px"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 md:col-4">
+          <div
+            class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer"
+          >
+            <span class="text-sm font-medium line-height-1">
+              ACTIVIDADES CUADRILLAS
+            </span>
+            <div class="flex justify-content-between">
+              <div class="flex justify-content-between align-items-center">
+                <div
+                  class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                  style="
+                    margin-right: 12px;
+                    background-color: #0bd18a;
+                    box-shadow: 0px 6px 20px rgba(11, 209, 138, 0.3);
+                  "
+                >
+                  <i class="pi pi-arrow-up w-2rem"></i
+                  ><span class="line-height-2">35%</span>
+                </div>
+                <div class="line-height-4 text-4xl">
+                  51 <span class="text-sm">actividades</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="../../../assets/value.svg"
+              class="absolute"
+              style="bottom: 14px; right: 12px"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 md:col-4">
+          <div
+            class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer"
+          >
+            <span class="text-sm font-medium line-height-1">
+              ACTIVIDADES EMBARCACIONES
+            </span>
+            <div class="flex justify-content-between">
+              <div class="flex justify-content-between align-items-center">
+                <div
+                  class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                  style="
+                    background-color: #00d0de;
+                    box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);
+                  "
+                >
+                  <i class="pi pi-plus w-2rem"></i
+                  ><span class="line-height-2">4</span>
+                </div>
+                <div class="line-height-4 text-4xl">
+                  16 <span class="text-sm">actividades</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="../../../assets/quantity.svg"
+              class="absolute"
+              style="bottom: 14px; right: 12px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-10">
+        <span
+          class="flex justify-content-center align-items-center text-orange-700 text-xl font-semibold line-height-1 mb-2"
+          >Estatus de las actividades
+        </span>
+      </div>
+
+      <div class="flex col-12">
+        <div class="col-12 md:col-4">
+          <div
+            class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+          >
+            <span class="text-sm font-medium line-height-1">
+              FUERA DE OPERACION
+            </span>
+            <div class="flex justify-content-between">
+              <div class="flex justify-content-between align-items-center">
+                <div
+                  class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                  style="
+                    background-color: #00d0de;
+                    box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);
+                  "
+                >
+                  <i class="pi pi-plus w-2rem"></i
+                  ><span class="line-height-2">4</span>
+                </div>
+                <div class="line-height-4 text-4xl">
+                  10 <span class="text-sm">Fuera de operación</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="../../../assets/rate.svg"
+              class="absolute"
+              style="bottom: 14px; right: 12px"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 md:col-4">
+          <div
+            (click)="suspendidasMostrar()"
+            class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer"
+          >
+            <span class="text-sm font-medium line-height-1">
+              ACTIVIDADES SUSPENDIDAS
+            </span>
+            <div class="flex justify-content-between">
+              <div class="flex justify-content-between align-items-center">
+                <div
+                  class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                  style="
+                    margin-right: 12px;
+                    background-color: #ef5b3d;
+                    box-shadow: 0px 6px 20px rgba(216, 126, 15, 0.3);
+                  "
+                >
+                  <i class="pi pi-arrow-up w-2rem"></i
+                  ><span class="line-height-2">25%</span>
+                </div>
+                <div class="line-height-4 text-4xl">
+                  10 <span class="text-sm">actividades</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="../../../assets/value.svg"
+              class="absolute"
+              style="bottom: 14px; right: 12px"
+            />
+          </div>
+        </div>
+        <div class="col-12 md:col-4">
+          <div
+            class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer"
+          >
+            <span class="text-sm font-medium line-height-1">
+              ACTIVIDADES CANCELADAS
+            </span>
+            <div class="flex justify-content-between">
+              <div class="flex justify-content-between align-items-center">
+                <div
+                  class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                  style="
+                    background-color: #00de34;
+                    box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);
+                  "
+                >
+                  <i class="pi pi-minus w-2rem"></i
+                  ><span class="line-height-2">1</span>
+                </div>
+                <div class="line-height-4 text-4xl">
+                  2 <span class="text-sm">actividades</span>
+                </div>
+              </div>
+            </div>
+            <img
+              src="../../../assets/quantity.svg"
+              class="absolute"
+              style="bottom: 14px; right: 12px"
+            />
+          </div>
+        </div>
+      </div>
+
+      <p-dialog
+        header="ACTIVIDADES SUSPENDIDAS"
+        [modal]="true"
+        [(visible)]="visibleSuspendidas"
+        [style]="{ width: '85rem' }"
+      >
+        <div class="flex col-12 p-0 pt-2 pr-2">
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                POR CAMBIO DE PRIORIDAD
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 5 </span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                HASTA QUE EL ACTIVO INDIQUE CONTINUAR
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 2</span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                CAMBIO DE PROGRAMA
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white">0</span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 1</span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex col-12 p-0 pt-2 pr-2">
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                SIN MOTIVO
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 2 </span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+        </div>
+      </p-dialog>
+
+      <div class="col-12 md:col-4">
+        <div
+          class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+        >
+          <span class="text-sm font-medium line-height-1">
+            CIERRE ADMINISTRATIVO
+          </span>
+          <div class="flex justify-content-between">
+            <div class="flex justify-content-between align-items-center">
+              <div
+                class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                style="
+                  background-color: #00d0de;
+                  box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);
+                "
+              >
+                <i class="pi pi-plus w-2rem"></i
+                ><span class="line-height-2">1</span>
+              </div>
+              <div class="line-height-4 text-4xl">
+                2 <span class="text-sm">cierres</span>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../../../assets/rate.svg"
+            class="absolute"
+            style="bottom: 14px; right: 12px"
+          />
+        </div>
+      </div>
+
+      <div class="col-12 md:col-4">
+        <div
+          (click)="sinAvanceMostrar()"
+          class="card relative h-6rem border-round-xl p-3 hallazgosLinkMid cursor-pointer"
+        >
+          <span class="text-sm font-medium line-height-1"> SIN AVANCE </span>
+          <div class="flex justify-content-between">
+            <div class="flex justify-content-between align-items-center">
+              <div
+                class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                style="
+                  margin-right: 12px;
+                  background-color: #22bec9;
+                  box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                "
+              >
+                <i class="pi pi-arrow-up w-2rem"></i
+                ><span class="line-height-2">15%</span>
+              </div>
+              <div class="line-height-4 text-4xl">
+                20 <span class="text-sm">actividades</span>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../../../assets/value.svg"
+            class="absolute"
+            style="bottom: 14px; right: 12px"
+          />
+        </div>
+      </div>
+
+      <p-dialog
+        header="ACTIVIDADES SUSPENDIDAS"
+        [modal]="true"
+        [(visible)]="visibleSinAvance"
+        [style]="{ width: '85rem' }"
+      >
+        <div class="flex col-12 p-0 pt-2 pr-2">
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                PRIORIDAD EN ATENCION DE HALLAZGOS
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 4 </span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                EN ESPERA DE AUTORIZACION DEL AREA
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 2</span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                CAMBIO DE PROGRAMA
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white">0</span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 1</span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="flex col-12 p-0 pt-2 pr-2">
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                OTRAS PRIORIDADES DEL ACTIVO
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 6 </span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+
+          <div class="col-12 md:col-4 p-0 pr-2">
+            <div
+              class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+            >
+              <span class="text-sm font-medium line-height-1">
+                POR PASE DE VALVULA
+              </span>
+              <div class="flex justify-content-between">
+                <div class="flex justify-content-between align-items-center">
+                  <div
+                    class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                    style="
+                      background-color: #22bec9;
+                      box-shadow: 0px 6px 20px rgba(28, 134, 148, 0.3);
+                    "
+                  >
+                    <i class="pi pi-arrow-up w-2rem text-white"></i
+                    ><span class="line-height-2 text-white"></span>
+                  </div>
+                  <div class="line-height-4 text-4xl">
+                    <span class="text-2xl"> 7 </span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="../../../assets/rate.svg"
+                class="absolute"
+                style="bottom: 14px; right: 12px"
+              />
+            </div>
+          </div>
+        </div>
+      </p-dialog>
+
+      <div class="col-12 md:col-4">
+        <div
+          class="card relative h-6rem border-round-xl p-3 hallazgosLinkEnd cursor-pointer"
+        >
+          <span class="text-sm font-medium line-height-1">
+            ACTIVIDADES TERMINADAS
+          </span>
+          <div class="flex justify-content-between">
+            <div class="flex justify-content-between align-items-center">
+              <div
+                class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                style="
+                  background-color: #00de34;
+                  box-shadow: 0px 6px 20px rgba(0, 208, 222, 0.3);
+                "
+              >
+                <i class="pi pi-plus w-2rem"></i
+                ><span class="line-height-2">1</span>
+              </div>
+              <div class="line-height-4 text-4xl">
+                13 <span class="text-sm">actividades</span>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../../../assets/quantity.svg"
+            class="absolute"
+            style="bottom: 14px; right: 12px"
+          />
+        </div>
+      </div>
+
+      <div class="col-12 md:col-4">
+        <div
+          class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+        >
+          <span class="text-sm font-medium line-height-1"> EN PROCESO </span>
+          <div class="flex justify-content-between">
+            <div class="flex justify-content-between align-items-center">
+              <div
+                class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                style="
+                  background-color: #757575;
+                  box-shadow: 0px 6px 20px rgba(100, 100, 100, 0.3);
+                "
+              >
+                <i class="pi pi-plus w-2rem"></i
+                ><span class="line-height-2">0</span>
+              </div>
+              <div class="line-height-4 text-4xl">
+                3 <span class="text-sm">proceso</span>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../../../assets/rate.svg"
+            class="absolute"
+            style="bottom: 14px; right: 12px"
+          />
+        </div>
+      </div>
+
+      <div class="col-12 md:col-4">
+        <div
+          class="card relative h-6rem border-round-xl p-3 hallazgosLeft cursor-pointer"
+        >
+          <span class="text-sm font-medium line-height-1"> SIN DEFINIR </span>
+          <div class="flex justify-content-between">
+            <div class="flex justify-content-between align-items-center">
+              <div
+                class="flex justify-content-center align-items-center h-2rem w-5rem border-round p-2 mr-3"
+                style="
+                  background-color: #e2dbdb;
+                  box-shadow: 0px 6px 20px rgba(100, 100, 100, 0.3);
+                "
+              >
+                <i class="pi pi-plus w-2rem"></i
+                ><span class="line-height-2">0</span>
+              </div>
+              <div class="line-height-4 text-4xl">
+                7 <span class="text-sm">sin definir </span>
+              </div>
+            </div>
+          </div>
+          <img
+            src="../../../assets/rate.svg"
+            class="absolute"
+            style="bottom: 14px; right: 12px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

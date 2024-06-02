@@ -1,0 +1,72 @@
+<app-header></app-header>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="layout-content">
+    <div class="grid">
+      <div class="logo">
+        <img class="h-7rem ml-3" src="../../../../assets/Felipe.png" />
+      </div>
+
+      <div class="col-12 md:col-8">
+        <div class="card widget-visitor-graph">
+          <div class="card-header line-height-4">
+            <span>Resumen de no conformidades APAPCH Abril 2024</span>
+
+            <form [formGroup]="formGroup">
+              <p-dropdown optionlabel="name"
+                class="p-element p-inputwrapper ng-valid p-inputwrapper-filled ng-dirty ng-touched"
+                formControlName="selectedCity" [options]="fechas" optionLabel="anio" placeholder="Elije una fecha">
+                <div id="pn_id_874" class="p-dropdown5 p-component p-inputwrapper p-inputwrapper-filled">
+                  <div role="button" aria-label="dropdown trigger" aria-haspopup="listbox" class="p-dropdown-trigger"
+                    data-pc-section="trigger" aria-expanded="false">
+                    <!---->
+                  </div>
+                  <p-overlay class="p-element ng-tns-c3177733119-223 ng-star-inserted"><!----></p-overlay>
+                </div>
+              </p-dropdown>
+            </form>
+          </div>
+
+          <div class="graph-content grid">
+            <div class="col-12 md:col-6">
+              <h2>58 Pendientes</h2>
+              <h6 class="mt-1">10% más que el último mes</h6>
+              <p class="text-color-secondary">
+                Para ver el programa detallado haga clic en el siguiente enlace
+                <a href="#" class="text-primary hover:text-primary-400 transition-duration-200">Ver más</a>
+              </p>
+            </div>
+            <div class="col-12 md:col-6">
+              <h2>39 Atendidas</h2>
+              <h6 class="mt-1">37% más que el último mes</h6>
+              <p class="text-color-secondary">
+                Responsables
+                <a href="#" class="text-primary hover:text-primary-400 transition-duration-200">Ver más</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="col-12 md:col-6 graph">
+              <h6 class="mt-1">Programa de atención</h6>
+              <p-chart type="bar" [data]="graficaMensual" [options]="options"></p-chart>
+            </div>
+
+            <div class="col-12 md:col-6 graph relative">
+              <span class="totalConformidades text-6xl font-medium">97</span>
+              <span class="totalPendientes text-4xl font-medium">58</span>
+              <span class="totalAtendidas text-4xl font-medium">39</span>
+              <h6 class="mt-1">No conformidades</h6>
+              <p-chart type="doughnut" [data]="data" [options]="options" />
+            </div>
+
+            <div class="col-12 md:col-6 graph">
+              <h6 class="mt-1">Nivel de criticidad</h6>
+              <p-chart type="bar" [data]="tipoRiesgo" [options]="options"></p-chart>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

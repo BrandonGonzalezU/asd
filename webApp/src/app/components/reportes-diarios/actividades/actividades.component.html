@@ -1,0 +1,99 @@
+<app-header></app-header>
+<div class="flex">
+  <app-sidebar></app-sidebar>
+  <div class="layout-content">
+    <div class="logo">
+      <img class="h-7rem ml-3" src="../../../../assets/Felipe.png" />
+    </div>
+    <div class="grid">
+      <div class="col-12 md:col-12">
+        <div
+          class="headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center"
+        >
+          <div class="col-3">
+            <div class="col-12 p-0 m-0">
+              <span
+                class="flex justify-content-between align-items-center text-orange-700 text-xl font-semibold line-height-1 mb-2"
+                >Reportes Diarios</span
+              >
+            </div>
+            <div class="col-12 p-0">
+              <span class="text-gray-500 text-base font-semibold line-height-1"
+                >Mes de {{ selectedPEM }}</span
+              >
+            </div>
+          </div>
+          <div
+            class="col-6 p-2 flex flex-wrap justify-content-end align-items-center gap-2"
+          >
+            <p-dropdown
+              [options]="versionesPET"
+              [(ngModel)]="selectedPEM"
+              placeholder="Selecciona un mes"
+              [group]="true"
+              (ngModelChange)="mesSeleccionado()"
+            >
+              <ng-template let-group pTemplate="group">
+                <div class="flex align-items-center">
+                  <span>{{ group.label }}</span>
+                </div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+        </div>
+
+        <div class="col-12 md:col-12">
+          <div class="col-10 p-0" *ngFor="let embarcacion of informacionCP">
+            <div
+              *ngIf="dataDinamica === embarcacion.data"
+              class="card justify-content-center"
+            >
+              <div class="col-12">
+                <span
+                  class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
+                  >Actividades
+                </span>
+              </div>
+              <p-chart
+                id="{{ dataDinamica }}  "
+                *ngIf="dataDinamica === 'dataCrestTarasco'"
+                type="bar"
+                [data]="dataCrestTarasco"
+                [options]="options"
+                (onDataSelect)="selectData($event)"
+              />
+              <p-chart
+                *ngIf="dataDinamica === 'dataDosBocas'"
+                type="bar"
+                [data]="dataDosBocas"
+                [options]="options"
+                (onDataSelect)="selectData($event)"
+              />
+              <p-chart
+                *ngIf="dataDinamica === 'dataToisaProteus'"
+                type="bar"
+                [data]="dataToisaProteus"
+                [options]="options"
+                (onDataSelect)="selectData($event)"
+              />
+              <p-chart
+                *ngIf="dataDinamica === 'dataBlueStingray'"
+                type="bar"
+                [data]="dataBlueStingray"
+                [options]="options"
+                (onDataSelect)="selectData($event)"
+              />
+              <p-chart
+                *ngIf="dataDinamica === 'dataBluePiooner'"
+                type="bar"
+                [data]="dataBluePiooner"
+                [options]="options"
+                (onDataSelect)="selectData($event)"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

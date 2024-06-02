@@ -1,0 +1,36 @@
+<div class="backgroun-login flex center-content">
+        <div class="mt-5">
+            <div class="grid center-content loginCard">
+                <p-card class="col-11 sm:col-8 md:col-5 lg:col-3" raised id="login-card">
+                    <p-header>
+                        <div class="center-text" style="display: grid;">
+                            <h1 class="mt-5">CIPM</h1>
+                        </div>
+                    </p-header>
+                    <ng-template pTemplate="header" style="padding: 2rem;">
+                        <div class="pl-5 pr-5">
+                            <img src="../../../assets/logo.png">
+                        </div>
+                        <p-divider class="p-0"></p-divider>
+                    </ng-template>
+                
+                    <div >
+                        <div class="flex flex-wrap justify-content-center align-items-center gap-2 col-12">
+                            <label for="username" class="col-12 p-0">Usuario</label>
+                            <input pInputText id="username" type="text" class="col-12"/>
+                        </div>
+                        <div class="flex flex-wrap justify-content-center align-items-center gap-2 col-12">
+                            <label for="password" class="col-12 p-0">Contraseña</label>
+                            <input pInputText id="password" type="password" class="col-12" />
+                                
+                        </div>
+                        <div class="flex center-content pt-5">
+                            <p-button raised label="Iniciar sesión" styleClass="w-10rem mx-auto" (onClick)="login()"></p-button>
+                        </div>
+                    </div>
+                </p-card>
+            </div>
+        </div>
+        
+</div>
+

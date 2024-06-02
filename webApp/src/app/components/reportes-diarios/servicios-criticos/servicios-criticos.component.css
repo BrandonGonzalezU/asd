@@ -1,0 +1,30 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  margin-top: -1rem;
+  width: 80vw;
+}
+
+.layout-content {
+  margin-left: 22.5rem;
+  margin-top: 1rem;
+  width: 80vw;
+  min-height: 89vh;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
