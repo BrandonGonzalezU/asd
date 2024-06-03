@@ -139,7 +139,7 @@ export class ReportesDiariosComponent implements OnInit {
       case 'Litoral-A': {
         switch (this.activeIndex) {
           case 2: {
-            console.log('esats en artemis');
+            console.log('estas en artemis');
           }
         }
         this.activeIndex = 1;
@@ -219,65 +219,38 @@ export class ReportesDiariosComponent implements OnInit {
 
   selectData(e: any) {
     this.dia = e.element.index + 1;
-    if (e.element.datasetIndex === this.programado) {
+    if (e.element.index > 9) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/PEM/' +
-          this.COembarcaciones[this.activeIndex] +
-          '/programado/',
-        this.dia,
-      ]);
-    } else if (e.element.datasetIndex === this.realizado) {
-      this.router.navigate([
-        'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/PEM/' +
-          this.COembarcaciones[this.activeIndex] +
-          '/realizado/',
-        this.dia,
-      ]);
-    } else if (e.element.datasetIndex === this.rezago) {
-      this.router.navigate([
-        'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/PEM/' +
-          this.COembarcaciones[this.activeIndex] +
-          '/rezago/',
-        this.dia,
-      ]);
-    } else if (e.element.datasetIndex === this.fueraDePrograma) {
-      this.router.navigate([
-        'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/PEM/' +
-          this.COembarcaciones[this.activeIndex] +
-          '/fuera-de-programa/',
-        this.dia,
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.COembarcaciones[this.activeIndex] +
+        '/' + this.selectedPEM + '/' + this.dia + '/actividades'
       ]);
     } else {
-      console.log('Error');
+      this.dia = '0' + this.dia;
+      this.router.navigate([
+        'centros-de-proceso/' +
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.COembarcaciones[this.activeIndex] +
+        '/' + this.selectedPEM + '/' + this.dia + '/actividades'
+      ]);
     }
-    // console.log(e)
-    // console.log(e.element);
-    // console.log(e.element.datasetIndex);
-    // console.log(e.element.index);
-  }
 
-  // checkData() {
-  //   return [this.dataDinamica + '.actividades[0].programadas'];
-  // }
+
+  }
 
   goToTotalProgramadas() {
     console.log('Total Programadas');
     this.router.navigate([
       '/centros-de-proceso/' +
-        this.centroDeProceso +
-        '/opciones/PEM/' +
-        this.selectedPEM +
-        '/' +
-        this.COembarcaciones[this.activeIndex] +
-        '/programado',
+      this.centroDeProceso +
+      '/opciones/PEM/' +
+      this.selectedPEM +
+      '/' +
+      this.COembarcaciones[this.activeIndex] +
+      '/programado',
     ]);
   }
 
@@ -285,10 +258,10 @@ export class ReportesDiariosComponent implements OnInit {
     console.log('Total Programadas');
     this.router.navigate([
       '/centros-de-proceso/' +
-        this.centroDeProceso +
-        '/opciones/PEM/' +
-        this.COembarcaciones[this.activeIndex] +
-        '/realizado',
+      this.centroDeProceso +
+      '/opciones/PEM/' +
+      this.COembarcaciones[this.activeIndex] +
+      '/realizado',
     ]);
   }
 
@@ -296,10 +269,10 @@ export class ReportesDiariosComponent implements OnInit {
     console.log('Total Programadas');
     this.router.navigate([
       '/centros-de-proceso/' +
-        this.centroDeProceso +
-        '/opciones/PEM/' +
-        this.COembarcaciones[this.activeIndex] +
-        '/rezago',
+      this.centroDeProceso +
+      '/opciones/PEM/' +
+      this.COembarcaciones[this.activeIndex] +
+      '/rezago',
     ]);
   }
 
@@ -307,10 +280,10 @@ export class ReportesDiariosComponent implements OnInit {
     console.log('Total Programadas');
     this.router.navigate([
       '/centros-de-proceso/' +
-        this.centroDeProceso +
-        '/opciones/PEM/' +
-        this.COembarcaciones[this.activeIndex] +
-        '/fuera-de-programa',
+      this.centroDeProceso +
+      '/opciones/PEM/' +
+      this.COembarcaciones[this.activeIndex] +
+      '/fuera-de-programa',
     ]);
   }
 
@@ -1541,10 +1514,10 @@ export class ReportesDiariosComponent implements OnInit {
               ],
               actividades: [
                 {
-                  programadas: '69',
-                  realizado: '21',
-                  rezago: '2',
-                  fueraDePrograma: '13',
+                  programadas: '68',
+                  realizado: '22',
+                  rezago: '19',
+                  fueraDePrograma: '9',
                 },
               ],
               datasets: [
@@ -1555,8 +1528,7 @@ export class ReportesDiariosComponent implements OnInit {
                   borderDash: [5, 5],
                   tension: 0.4,
                   data: [
-                    1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 13, 13, 13, 13, 13,
-                    13, 15, 15, 15, 15, 15, 17, 17, 17, 17, 17, 59,
+                    39, 39, 39, 39, 39, 39, 40, 41, 41, 42, 42, 43, 43, 43, 44, 44, 44, 44, 44, 45, 45, 45, 45, 46, 46, 46, 46, 46, 47, 47
                   ],
                 },
               ],

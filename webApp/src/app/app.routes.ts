@@ -21,6 +21,7 @@ import { RealizadasTotalComponent } from './components/embarcaciones/total-activ
 import { FueraDeProgramaTotalComponent } from './components/embarcaciones/total-actividades/fuera-de-programa-total/fuera-de-programa-total.component';
 import { ReportesDiariosComponent } from './components/reportes-diarios/reportes-diarios.component';
 import { ServiciosCriticosComponent } from './components/reportes-diarios/servicios-criticos/servicios-criticos.component';
+import { ActividadesComponent } from './components/reportes-diarios/actividades/actividades.component';
 
 export const routes: Routes = [
   { path: '', title: 'Login', component: LoginComponent },
@@ -63,12 +64,12 @@ export const routes: Routes = [
     component: ReportesDiariosComponent,
   },
   {
-    path: 'centros-de-proceso/:centrodeproceso/opciones/ReportesDiarios/:mes/actividades',
+    path: 'centros-de-proceso/:centrodeproceso/opciones/ReportesDiarios/:embarcacion/:mes/:dia/actividades',
     title: 'Resumen Actividades',
-    component: ReportesDiariosComponent,
+    component: ActividadesComponent,
   },
   {
-    path: 'centros-de-proceso/:centrodeproceso/opciones/ReportesDiarios/:mes/actividades/:servicio',
+    path: 'centros-de-proceso/:centrodeproceso/opciones/ReportesDiarios/:embarcacion/:mes/actividades/:servicio',
     title: 'Servicio Critico',
     component: ServiciosCriticosComponent,
   },
