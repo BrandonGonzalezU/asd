@@ -52,13 +52,7 @@
   margin-left: 1.5vw;
 }
 
-:host
-  ::ng-deep
-  .p-timeline-horizontal
-  div
-  .p-timeline-event-content
-  .operando:hover {
-}
+:host ::ng-deep .p-timeline-horizontal div .p-timeline-event-content .operando:hover {}
 
 .article {
   scale: 1.5;
@@ -184,4 +178,21 @@
   background-color: red;
   z-index: 10 !important;
   margin-top: 2rem;
+}
+
+.realizadas {
+  position: absolute;
+  top: 33%;
+  left: 17%;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.programadas {
+  position: absolute;
+  top: 80%;
+  right: 35%;
+  color: white;
+  font-size: 1.6rem;
+  z-index: 1;
 }

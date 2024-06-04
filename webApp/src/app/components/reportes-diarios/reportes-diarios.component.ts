@@ -385,19 +385,17 @@ export class ReportesDiariosComponent implements OnInit {
     };
 
     this.dataCrestTarascoStatus = {
-      labels: ['En operación', 'Frente frío', 'Fuera de operación'],
+      labels: ['Total', 'Realizadas'],
       datasets: [
         {
-          data: [19, 3, 8],
+          data: [95, 33],
           backgroundColor: [
-            documentStyle.getPropertyValue('--green-500'),
-            documentStyle.getPropertyValue('--gray-500'),
-            documentStyle.getPropertyValue('--red-500'),
+            documentStyle.getPropertyValue('--gray-400'),
+            documentStyle.getPropertyValue('--green-400'),
           ],
           hoverBackgroundColor: [
-            documentStyle.getPropertyValue('--green-400'),
-            documentStyle.getPropertyValue('--gray-400'),
-            documentStyle.getPropertyValue('--red-400'),
+            documentStyle.getPropertyValue('--gray-500'),
+            documentStyle.getPropertyValue('--green-500'),
           ],
         },
       ],
@@ -1275,10 +1273,9 @@ export class ReportesDiariosComponent implements OnInit {
               ],
               actividades: [
                 {
-                  programadas: '68',
-                  realizado: '22',
-                  rezago: '7',
-                  fueraDePrograma: '9',
+                  programadas: '95',
+                  realizado: '33',
+                  fueraDePrograma: '26',
                 },
               ],
               datasets: [
@@ -1514,10 +1511,10 @@ export class ReportesDiariosComponent implements OnInit {
               ],
               actividades: [
                 {
-                  programadas: '68',
-                  realizado: '22',
-                  rezago: '19',
-                  fueraDePrograma: '9',
+                  programadas: '69',
+                  fueraDePrograma: '26',
+                  realizado: '33',
+                  pendientes: (69 + 26) - 33
                 },
               ],
               datasets: [

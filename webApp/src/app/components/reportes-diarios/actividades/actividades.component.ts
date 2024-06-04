@@ -276,9 +276,9 @@ export class ActividadesComponent implements OnInit {
     for (let i = 0; i < this.PEM.length; i++) {
       if (
         this.PEM[i].inicio >
-          new Date('2024-' + this.mes + '-01T06:00:00.000Z') &&
+        new Date('2024-' + this.mes + '-01T06:00:00.000Z') &&
         this.PEM[i].inicio <
-          new Date('2024-' + this.mes + '-' + this.dia + 'T23:00:00.000Z') &&
+        new Date('2024-' + this.mes + '-' + this.dia + 'T23:00:00.000Z') &&
         this.PEM[i].recurso === 'EMBARCACIONES'
       ) {
         switch (this.PEM[i].rubro) {
@@ -314,9 +314,9 @@ export class ActividadesComponent implements OnInit {
     for (let i = 0; i < this.PEM.length; i++) {
       if (
         this.PEM[i].inicio >
-          new Date('2024-' + this.mes + '-01T06:00:00.000Z') &&
+        new Date('2024-' + this.mes + '-01T06:00:00.000Z') &&
         this.PEM[i].inicio <
-          new Date('2024-' + this.mes + '-' + this.dia + 'T23:00:00.000Z') &&
+        new Date('2024-' + this.mes + '-' + this.dia + 'T23:00:00.000Z') &&
         this.PEM[i].recurso === 'CUADRILLAS'
       ) {
         switch (this.PEM[i].rubro) {
@@ -382,6 +382,9 @@ export class ActividadesComponent implements OnInit {
       datasets: [
         {
           label: 'Menu',
+          barPercentage: 0.1,
+          barThickness: 50,
+          maxBarThickness: 50,
           data: [
             this.rubroHimsCantidadE,
             this.rubroRequerimientoOperativoCantidadE,
@@ -681,166 +684,166 @@ export class ActividadesComponent implements OnInit {
     if (e.element.index === 0) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/hims',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/hims',
       ]);
     }
     if (e.element.index === 1) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/requerimiento-operativo',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/requerimiento-operativo',
       ]);
     }
     if (e.element.index === 2) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/amarre-pozos',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/amarre-pozos',
       ]);
     }
     if (e.element.index === 3) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/mantenimiento-estructural',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/mantenimiento-estructural',
       ]);
     }
     if (e.element.index === 4) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/anomalia',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/anomalia',
       ]);
     }
     if (e.element.index === 5) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/levantamientos',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/levantamientos',
       ]);
     }
     if (e.element.index === 6) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/mantenimiento-correctivo-linea',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/mantenimiento-correctivo-linea',
       ]);
     }
     if (e.element.index === 7) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/mantenimiento-preventivo-linea',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/mantenimiento-preventivo-linea',
       ]);
     }
     if (e.element.index === 8) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/mantenimiento-preventivo-recipiente',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/mantenimiento-preventivo-recipiente',
       ]);
     }
     if (e.element.index === 9) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/mantenimiento-preventivo-estructural',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/mantenimiento-preventivo-estructural',
       ]);
     }
     if (e.element.index === 10) {
       this.router.navigate([
         'centros-de-proceso/' +
-          this.centroDeProceso +
-          '/opciones/ReportesDiarios/' +
-          this.embarcacion +
-          '/' +
-          this.selectedPEM +
-          '/' +
-          this.dia +
-          '/actividades/' +
-          this.recurso +
-          '/prefabricados',
+        this.centroDeProceso +
+        '/opciones/ReportesDiarios/' +
+        this.embarcacion +
+        '/' +
+        this.selectedPEM +
+        '/' +
+        this.dia +
+        '/actividades/' +
+        this.recurso +
+        '/prefabricados',
       ]);
     }
   }
