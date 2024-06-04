@@ -69,7 +69,7 @@ export const routes: Routes = [
     component: ActividadesComponent,
   },
   {
-    path: 'centros-de-proceso/:centrodeproceso/opciones/ReportesDiarios/:embarcacion/:mes/actividades/:servicio',
+    path: 'centros-de-proceso/:centrodeproceso/opciones/ReportesDiarios/:embarcacion/:mes/:dia/actividades/:recurso/:servicio',
     title: 'Servicio Critico',
     component: ServiciosCriticosComponent,
   },

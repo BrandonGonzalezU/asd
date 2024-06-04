@@ -28,3 +28,9 @@
   box-sizing: border-box;
   margin-bottom: 8px;
 }
+
+:host ::ng-deep .p-progressbar .p-progressbar-value {
+  border: 0 none;
+  margin: 0;
+  background: #00ff4e;
+}

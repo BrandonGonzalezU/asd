@@ -8,64 +8,131 @@
     <div class="grid">
       <div class="col-12 md:col-12">
         <div
-          class="headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center"
+          class="col-12 headerEmbarcacion card relative h-6rem border-round-xl flex justify-content-between align-items-center"
         >
           <div class="col-3">
-            <div class="col-12 p-0 m-0">
+            <div class="col-6 p-0 m-0">
               <span
                 class="flex justify-content-between align-items-center text-orange-700 text-xl font-semibold line-height-1 mb-2"
                 >HIMS</span
               >
             </div>
-            <div class="col-12 p-0">
+            <div class="col-6 p-0">
               <span class="text-gray-500 text-base font-semibold line-height-1"
                 >Mes de {{ mesSeleccionado }}
               </span>
             </div>
           </div>
+          <div class="col-6 flex justify-content-center">
+            <div *ngIf="recurso === 'embarcaciones'" class="col-12">
+              <span
+                class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
+                >Embarcacion
+              </span>
+            </div>
+            <div *ngIf="recurso === 'cuadrillas'" class="col-12">
+              <span
+                class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
+                >Cuadrillas
+              </span>
+            </div>
+          </div>
+          <div class="col-3"></div>
         </div>
 
         <div class="col-12 md:col-12">
           <div class="col-12 p-0" *ngFor="let embarcacion of informacionCP">
             <div
               *ngIf="dataDinamica === embarcacion.data"
-              class="card justify-content-center"
+              class="card col-12 justify-content-center"
             >
-              <div class="col-12 flex">
-                <div class="col-6">
-                  <span
-                    class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
-                    >Embarcacion
-                  </span>
-                </div>
-                <div class="col-6">
-                  <span
-                    class="flex justify-content-center align-items-center text-orange-700 text-3xl font-semibold line-height-1 mb-2"
-                    >Cuadrillas
-                  </span>
-                </div>
-              </div>
-
               <div
                 *ngIf="dataDinamica === 'dataCrestTarasco'"
                 class="col-12 flex gap-1"
               >
-                <p-chart
-                  class="col-6"
-                  id="{{ dataDinamica }}  "
-                  type="bar"
-                  [data]="dataCrestTarasco"
-                  [options]="options"
-                  (onDataSelect)="selectData($event)"
-                />
-                <p-chart
-                  class="col-6"
-                  id="{{ dataDinamica }}  "
-                  type="bar"
-                  [data]="dataCrestTarascoCuadrilla"
-                  [options]="options"
-                  (onDataSelect)="selectData($event)"
-                />
+                <p-table
+                  class="col-12 m-0 p-0"
+                  *ngIf="recurso === 'embarcaciones'"
+                  [value]="PEMfiltrado"
+                  [scrollable]="true"
+                  scrollHeight="60vh"
+                >
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th style="width: 50px">CSU</th>
+                      <th style="width: 100px">Inicio</th>
+                      <th style="width: 100px">Fin</th>
+                      <th style="width: 50px">Actividad</th>
+                      <th style="width: 100px">Calificación</th>
+                      <th style="width: 100px">Estatus</th>
+                      <th style="width: 200px">Avance</th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-actividades>
+                    <tr class="text-xs">
+                      <td>{{ actividades.CSU }}</td>
+                      <td>{{ formatDate(actividades.inicio) }}</td>
+                      <td>{{ formatDate(actividades.fin) }}</td>
+                      <td>{{ actividades.actividad }}</td>
+                      <td>{{ actividades.calificacion }}</td>
+                      <td>{{ actividades.estatus }}</td>
+                      <td><p-progressBar [value]="actividades.avance" /></td>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="footer">
+                    <tr>
+                      <td>CSU</td>
+                      <td>Inicio</td>
+                      <td>Fin</td>
+                      <td>Actividad</td>
+                      <td>Calificación</td>
+                      <td>Estatus</td>
+                      <td>Avance</td>
+                    </tr>
+                  </ng-template>
+                </p-table>
+
+                <p-table
+                  class="col-12 m-0 p-0"
+                  *ngIf="recurso === 'cuadrillas'"
+                  [value]="PEMfiltrado"
+                  [scrollable]="true"
+                  scrollHeight="60vh"
+                >
+                  <ng-template pTemplate="header">
+                    <tr>
+                      <th style="width: 50px">CSU</th>
+                      <th style="width: 100px">Inicio</th>
+                      <th style="width: 100px">Fin</th>
+                      <th style="width: 50px">Actividad</th>
+                      <th style="width: 100px">Calificación</th>
+                      <th style="width: 100px">Estatus</th>
+                      <th style="width: 200px">Avance</th>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="body" let-actividades>
+                    <tr class="text-xs">
+                      <td>{{ actividades.CSU }}</td>
+                      <td>{{ formatDate(actividades.inicio) }}</td>
+                      <td>{{ formatDate(actividades.fin) }}</td>
+                      <td>{{ actividades.actividad }}</td>
+                      <td>{{ actividades.calificacion }}</td>
+                      <td>{{ actividades.estatus }}</td>
+                      <td><p-progressBar [value]="actividades.avance" /></td>
+                    </tr>
+                  </ng-template>
+                  <ng-template pTemplate="footer">
+                    <tr>
+                      <td>CSU</td>
+                      <td>Inicio</td>
+                      <td>Fin</td>
+                      <td>Actividad</td>
+                      <td>Calificación</td>
+                      <td>Estatus</td>
+                      <td>Avance</td>
+                    </tr>
+                  </ng-template>
+                </p-table>
               </div>
 
               <div
@@ -73,6 +140,7 @@
                 class="col-12 flex gap-1"
               >
                 <p-chart
+                  *ngIf="recurso === 'embarcaciones'"
                   class="col-6"
                   type="bar"
                   [data]="dataDosBocas"
@@ -80,6 +148,7 @@
                   (onDataSelect)="selectData($event)"
                 />
                 <p-chart
+                  *ngIf="recurso === 'cuadrillas'"
                   class="col-6"
                   type="bar"
                   [data]="dataDosBocasCuadrilla"
@@ -93,6 +162,7 @@
                 class="col-12 flex gap-1"
               >
                 <p-chart
+                  *ngIf="recurso === 'embarcaciones'"
                   class="col-6"
                   type="bar"
                   [data]="dataToisaProteus"
@@ -101,6 +171,7 @@
                 />
 
                 <p-chart
+                  *ngIf="recurso === 'cuadrillas'"
                   class="col-6"
                   type="bar"
                   [data]="dataToisaProteusCuadrilla"
@@ -114,6 +185,7 @@
                 class="col-12 flex gap-1"
               >
                 <p-chart
+                  *ngIf="recurso === 'embarcaciones'"
                   class="col-6"
                   type="bar"
                   [data]="dataBlueStingray"
@@ -122,6 +194,7 @@
                 />
 
                 <p-chart
+                  *ngIf="recurso === 'cuadrillas'"
                   class="col-6"
                   type="bar"
                   [data]="dataBlueStingrayCuadrilla"
@@ -135,6 +208,7 @@
                 class="col-12 flex gap-1"
               >
                 <p-chart
+                  *ngIf="recurso === 'embarcaciones'"
                   class="col-6"
                   type="bar"
                   [data]="dataBluePioneer"
@@ -143,6 +217,7 @@
                 />
 
                 <p-chart
+                  *ngIf="recurso === 'cuadrillas'"
                   class="col-6"
                   type="bar"
                   [data]="dataBluePioneerCuadrilla"
